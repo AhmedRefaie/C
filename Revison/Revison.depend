@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1500031713 source:c:\users\user\desktop\pcsx2 1.4.0\revison\revision.c
+1500028113 source:c:\users\user\desktop\pcsx2 1.4.0\revison\revision.c
 
-1502353895 source:c:\users\user\desktop\pcsx2 1.4.0\revison\main.c
+1505022541 source:c:\users\user\desktop\pcsx2 1.4.0\revison\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	<math.h>
+	"Refaie.h"
+
+1505022541 c:\users\user\desktop\pcsx2 1.4.0\revison\refaie.h
 

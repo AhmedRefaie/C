@@ -670,9 +670,75 @@ printf("%p \t %s \t %d \n", &lol, "lol", lol);
     printf("\n*pizza \t\t %d \n",*pizza);
     printf("\n*(pizza+2) \t %d \n",*(pizza+2));
 
+//simple array of char cant change it if you make it a pointer you can now
+char movie1[] ="BatMan";
+char * movie2 = "SuperMan";
+
+puts(movie2);
+
+movie2 = "New title SuperMan2";
+
+puts(movie2);
 
 
+/*string length*/
 
+char movie [20];
+char * pMovie = movie;
+
+fgets(pMovie, 20, stdin);/*contols number of char and inputs*/
+puts(pMovie);
+
+/*the heap an extra memory not uesd yet*/
+int * points;
+
+points= (int *) malloc(5 * sizeof(int));
+
+free(points);
+/*Heap Application*/
+int i,howmany;
+int total;
+float average = 0.0;
+int *pointArray;
+
+printf("How many numbers do you want to average??\n");
+scanf(" %d", &howmany);
+
+pointArray=(int *) malloc(howmany * sizeof(int));
+
+printf("Enter Numbers if you dare \n");
+
+for(i=0;i<howmany;i++){
+scanf(" %d", &pointArray[i]);
+total += pointArray[i];
+}
+
+average = (float)total / (float)howmany;
+
+printf("Average is %f",average);
+/*structures*/
+ struct user Refaie;
+    struct user Khalil;
+
+    Refaie.userID=123;
+    Khalil.userID=321;
+
+    puts("Enter the 1st name of user 1");
+    gets(Refaie.firstName);
+
+    puts("Enter the 2nd name of user 2");
+    gets(Khalil.firstName);
+
+    printf("User 1 id is %d\n", Refaie.userID);
+    printf("User 2 id is %d\n", Khalil.userID);
+struct user{
+    int userID;
+    char firstName[25];
+    char lastName[25];
+    int age;
+    float weight;
+};
+//
 
 
 
