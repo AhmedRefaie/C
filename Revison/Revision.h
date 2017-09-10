@@ -738,79 +738,139 @@ struct user{
     int age;
     float weight;
 };
-//
+/*Creating files with c*/
+ FILE * fPointer;
+fPointer = fopen("pizza.txt","w");
 
+fprintf(fPointer,"iam sexy\n");
 
+fclose(fPointer);
+/*read the file*/
+FILE * fPointer;
+fPointer = fopen("pizza.txt", "r");
+char singleLine[150];
 
+while(!feof(fPointer)){
+    fgets(singleLine, 150, fPointer);
+    puts(singleLine);
+}
 
+fclose(fPointer);
 
+/*last line to relate stuff*/
+FILE * fPointer;
+fPointer = fopen("pizza.txt", "a");
+char singleLine[150];
 
+fprintf(fPointer,"\n- a hikewl By Ahmed Refaie");
 
+fclose(fPointer);
+/*random acces fies*/
+FILE * fPointer;
+fPointer = fopen("pizza.txt", "w+");
+fputs("I am hungry food not coming", fPointer);
 
+fseek(fPointer, 17, SEEK_SET);
+fputs("is ", fPointer);
 
 
+fseek(fPointer, -6, SEEK_END);
+fputs("On the way", fPointer);
 
+fclose(fPointer);
+/*functutions write it 1 time use it as you wish*/
+void print();
 
+int main()
+{
+print();
+print();
+print();
 
+return 0;
+}
 
+void print(){
+printf("I am a function\n");
+return;
+}
+/*global or local var*/
+void print();
+int bars= 23;
 
+int main()
+{
+    printf("I have %d bars\n", bars);
+    print();
+    return 0;
+}
 
+void print(){
+    printf("I have %d bars", bars);
+    return;
+}
 
+/*funnction also*/
 
+    float euroPrice1 = 2.00;
+    float euroPrice2 = 55.00;
+    convertToDollars(euroPrice1);
+    convertToDollars(euroPrice2);
 
 
+    return 0;
+}
 
+void convertToDollars(float euro){
+    float usd = euro * 1.37;
+    printf("%.2f Euros - %.2f USD\n", euro, usd);
 
+    return;
+}
+/*using return*/
+int calculateBonus(int YearsWorked);
 
+int main(){
 
+    int refaieBonus = calculateBonus(14);
+    int emmaBonus = calculateBonus(3);
 
+    printf("Refaie gets $%d \n", refaieBonus);
+    printf("Emma gets $%d \n", emmaBonus);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return 0;
+}
+
+int calculateBonus(int YearsWorked){
+    int bonus = YearsWorked * 250;
+
+    if(YearsWorked>10){
+        bonus += 1000;
+    }
+
+    return bonus;
+}
+/*passing by adress or value*/
+void passByValue(int i);
+void passByAddress(int *i);
+
+int main(){
+    int tuna = 20;
+
+    passByValue(tuna);
+    printf("Passin by value tuna is now %d\n", tuna);
+
+    passByAddress(&tuna);
+    printf("Passin by value tuna is now %d\n", tuna);
+    return 0;
+}
+
+void passByValue(int i){
+    i = 99;
+    return;
+}
+
+void passByAddress(int *i){
+    *i = 64;
+    return;
+}

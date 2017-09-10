@@ -36,9 +36,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Revision.h" />
-		<Unit filename="Untitled1.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
