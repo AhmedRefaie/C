@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1500031713 source:c:\users\user\desktop\pcsx2 1.4.0\revison\revision.c
+
+1502353895 source:c:\users\user\desktop\pcsx2 1.4.0\revison\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<math.h>
+

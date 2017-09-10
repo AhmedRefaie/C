@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1499672259 source:c:\users\user\desktop\pcsx2 1.4.0\qaz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"RefaieInfo.h"
+
+1499683072 c:\users\user\desktop\pcsx2 1.4.0\qaz\refaieinfo.h
+
